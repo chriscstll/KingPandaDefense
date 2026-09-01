@@ -1,0 +1,82 @@
+$color-base: #0A0C0F;
+$color-surface: #1C2025;
+$color-surface-raised: #232830;
+$color-border: #2E3540;   
+$color-gold: #C9A84C;   
+$color-gold-dim: #9E7E35;   
+$color-text-primary: #E8E8E8;   
+$color-text-secondary: #8A9099;
+$color-text-inverse: #0A0C0F;   
+$color-danger: #C0392B;
+$color-success: #2ECC71;
+
+$font-display: 'Barlow Condensed', sans-serif;
+$font-body: 'DM Sans', sans-serif;
+$fs-xs:   0.75rem;   //  12px
+$fs-sm:   0.875rem;  //  14px
+$fs-base: 1rem;      //  16px
+$fs-md:   1.125rem;  //  18px
+$fs-lg:   1.375rem;  //  22px
+$fs-xl:   1.75rem;   //  28px
+$fs-2xl:  2.25rem;   //  36px
+$fs-3xl:  3rem;      //  48px
+$fs-4xl:  4rem;      //  64px
+$fs-5xl:  5.5rem;    //  88px
+$fw-light:    300;
+$fw-regular:  400;
+$fw-medium:   500;
+$fw-semibold: 600;
+$fw-bold:     700;
+$fw-extrabold:800;
+$lh-tight:   1.1;
+$lh-snug:    1.3;
+$lh-base:    1.6;
+$lh-relaxed: 1.75;
+
+$space-1:   0.25rem;  //  4px
+$space-2:   0.5rem;   //  8px
+$space-3:   0.75rem;  // 12px
+$space-4:   1rem;     // 16px
+$space-5:   1.25rem;  // 20px
+$space-6:   1.5rem;   // 24px
+$space-8:   2rem;     // 32px
+$space-10:  2.5rem;   // 40px
+$space-12:  3rem;     // 48px
+$space-16:  4rem;     // 64px
+$space-20:  5rem;     // 80px
+$space-24:  6rem;     // 96px
+$space-32:  8rem;     // 128px
+
+$container-max:       1280px;
+$container-padding:   $space-6;
+$container-padding-sm:$space-4;
+
+$header-height:       72px;
+$header-height-sm:    60px;
+
+$radius-sm:   2px;
+$radius-base: 4px;  
+$radius-lg:   6px;
+
+$border-width:    1px;
+$border-width-lg: 2px;
+
+$transition-fast:   150ms ease;
+$transition-base:   250ms ease;
+$transition-slow:   400ms ease;
+
+$shadow-sm:   0 2px 6px rgba(0, 0, 0, 0.4);
+$shadow-base: 0 4px 16px rgba(0, 0, 0, 0.5);
+$shadow-lg:   0 8px 32px rgba(0, 0, 0, 0.6);
+
+$z-base:    0;
+$z-above:   10;
+$z-nav:     100;
+$z-overlay: 200;
+$z-modal:   300;
+
+$bp-sm:   480px;
+$bp-md:   768px;
+$bp-lg:   1024px;
+$bp-xl:   1280px;
+$bp-2xl:  1536px;

@@ -1,1 +1,97 @@
 @use '../abstracts' as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  tab-size: 4;
+
+  @media (prefers-reduced-motion: reduce) {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+    font-family: $font-body;
+    font-size: $fs-base;
+    font-weight: $fw-regular;
+    line-height: $lh-base;
+    color: $color-text-primary;
+    background-color: $color-base;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-display;
+  font-weight: $fw-bold;
+  line-height: $lh-tight;
+  color: $color-text-primary;
+}
+p {
+  max-width: 68ch;
+  color: $color-text-secondary;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color $transition-fast;
+
+  &:focus-visible {
+    @include focus-ring;
+    border-radius: $radius-sm;
+  }
+}
+ul, ol {
+  list-style: none;
+}
+img, svg, video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+button, input, select, textarea {
+  font: inherit;
+  color: inherit;
+}
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+::selection {
+  background-color: rgba($color-gold, 0.3);
+  color: $color-text-primary;
+}
+
+// ── Scrollbar (webkit) ─────────────────────────
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: $color-base;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $color-border;
+  border-radius: $radius-base;
+
+  &:hover {
+    background: $color-gold-dim;
+  }
+}
