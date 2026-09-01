@@ -1,2 +1,175 @@
 @use '../abstracts' as *;
 
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: $z-nav;
+  height: $header-height-sm;
+  background-color: rgba($color-base, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: $border-width solid $color-border;
+  transition: background-color $transition-base, border-color $transition-base;
+
+  @include respond-to(md) {
+    height: $header-height;
+  }
+
+  // Scrolled state (added by JS)
+  &.is-scrolled {
+    background-color: rgba($color-base, 0.98);
+    border-bottom-color: $color-gold-dim;
+  }
+
+  &__inner {
+    @include flex(row, center, space-between);
+    height: 100%;
+  }
+
+  &__logo {
+    @include flex(row, center, flex-start, $space-3);
+    text-decoration: none;
+
+    .logo-mark {
+      color: $color-gold;
+      font-size: $fs-lg;
+      line-height: 1;
+    }
+
+    .logo-text {
+      font-family: $font-display;
+      font-size: $fs-lg;
+      font-weight: $fw-extrabold;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: $color-text-primary;
+
+      em {
+        font-style: normal;
+        color: $color-gold;
+        font-weight: $fw-light;
+      }
+    }
+  }
+
+  &__cta {
+    display: none;
+
+    @include respond-to(lg) {
+      display: inline-flex;
+    }
+  }
+
+  // ── Mobile toggle ────────────────────────────
+  &__toggle {
+    @include flex(column, center, center, 5px);
+    width: 36px;
+    height: 36px;
+    padding: $space-2;
+    cursor: pointer;
+    background: none;
+    border: none;
+
+    @include respond-to(lg) {
+      display: none;
+    }
+
+    span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background-color: $color-text-primary;
+      transition: transform $transition-base, opacity $transition-fast;
+      transform-origin: center;
+    }
+
+    &[aria-expanded="true"] {
+      span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+      span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+      span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    }
+  }
+}
+
+// ── Navigation ────────────────────────────────
+.site-nav {
+  display: none;
+
+  @include respond-to(lg) {
+    display: block;
+  }
+
+  &__list {
+    @include flex(row, center, flex-start, $space-8);
+  }
+
+  &__link {
+    font-family: $font-display;
+    font-size: $fs-sm;
+    font-weight: $fw-semibold;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: $color-text-secondary;
+    transition: color $transition-fast;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background-color: $color-gold;
+      transition: width $transition-base;
+    }
+
+    &:hover,
+    &.is-active {
+      color: $color-text-primary;
+
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+
+  // ── Mobile nav drawer ──────────────────────
+  &--mobile {
+    display: block;
+    position: fixed;
+    top: $header-height-sm;
+    left: 0;
+    right: 0;
+    background-color: $color-surface;
+    border-bottom: $border-width solid $color-border;
+    padding: $space-6 $container-padding-sm;
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: transform $transition-base, opacity $transition-base, visibility $transition-base;
+    z-index: $z-nav - 1;
+
+    &.is-open {
+      transform: translateY(0);
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .site-nav__list {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: $space-6;
+    }
+
+    .site-nav__link {
+      font-size: $fs-lg;
+    }
+
+    @include respond-to(lg) {
+      display: none;
+    }
+  }
+}

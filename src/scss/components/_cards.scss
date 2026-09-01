@@ -1,1 +1,54 @@
 @use '../abstracts' as *;
+
+.vehicle-card {
+    &__img-wrap {
+        position: relative;
+        cursor: pointer;
+        overflow: hidden;
+
+        &:focus {
+            @include focus-ring;
+        }
+    }
+    &__img-placeholder,
+    &__img-wrap {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        display: block;
+        transition: transform $transition-slow;
+    }
+    &__img-overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba($color-base, 0.55);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity $transition-base;
+        
+        span {
+            
+            font-family: $font-display;
+            font-size: $fs-sm;
+            font-weight: $fw-bold;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: $color-gold;
+            border: 1px solid rgba($color-gold, 0.5);
+            padding: $space-2 $space-5;
+            border-radius: $radius-base; 
+        }
+    }
+    &__img-wrap:hover,
+    &__img-wrap:focus-visible {
+        .vehicle-card__img-placeholder,
+        img {
+        transform: scale(1.04);
+        }
+
+        .vehicle-card__img-overlay {
+        opacity: 1;
+        }
+    }
+}

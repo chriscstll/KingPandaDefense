@@ -1,1 +1,49 @@
 @use '../abstracts' as *;
+
+.hero {
+  position: relative;
+  height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  overflow: hidden;
+
+  @include below($bp-md) {
+    height: auto;
+    min-height: 100svh;
+  }
+  &__bg {
+     @include fill;
+    background-color: $color-base;
+    background-image: url('/images/bg1.png');
+    background-size: cover;
+    background-position: center;
+  }
+
+  &__content {
+    position: relative;
+    z-index: $z-above;
+    padding-top: clamp(120px, 20vh, 200px);
+    padding-bottom: $space-20;
+  }
+
+  &__headline {
+    font-family: $font-display;
+    font-size: clamp($fs-4xl, 10vw, $fs-5xl);
+    font-weight: $fw-extrabold;
+    line-height: $lh-tight;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    color: $color-text-primary;
+    margin-bottom: $space-8;
+    max-width: 14ch;
+
+    &--accent {
+      display: block;
+      color: $color-gold;
+    }
+  }
+}
+
+

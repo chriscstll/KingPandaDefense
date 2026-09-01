@@ -1,1 +1,104 @@
 @use '../abstracts' as *;
+@use "sass:color";
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: $space-2;
+  padding: $space-3 $space-6;
+  font-family: $font-display;
+  font-size: $fs-md;
+  font-weight: $fw-semibold;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border: $border-width-lg solid transparent;
+  border-radius: $radius-base;
+  transition:
+    background-color $transition-base,
+    color $transition-base,
+    border-color $transition-base,
+    transform $transition-fast;
+  cursor: pointer;
+  white-space: nowrap;
+
+  &:focus-visible {
+    @include focus-ring;
+  }
+
+  &:active {
+    transform: translateY(1px);
+  }
+
+  // ── Primary (gold fill) ─────────────────────
+  &--primary {
+    background-color: $color-gold;
+    color: $color-text-inverse;
+    border-color: $color-gold;
+
+    &:hover {
+      background-color: color.adjust($color-gold, $lightness: 8%);
+      border-color: color.scale($color-gold, $lightness: 8%);
+    }
+  }
+
+  // ── Ghost (outlined) ────────────────────────
+  &--ghost {
+    background-color: transparent;
+    color: $color-text-primary;
+    border-color: $color-border;
+
+    &:hover {
+      border-color: $color-gold;
+      color: $color-gold;
+    }
+  }
+
+  // ── Danger ──────────────────────────────────
+  &--danger {
+    background-color: $color-danger;
+    color: #fff;
+    border-color: $color-danger;
+
+    &:hover {
+      background-color: color.adjust($color-danger, $lightness: -8%);
+      border-color: color.adjust($color-danger, $lightness: -8%);
+    }
+  }
+
+  // ── Size modifiers ──────────────────────────
+  &--sm {
+    padding: $space-2 $space-4;
+    font-size: $fs-sm;
+  }
+
+  &--lg {
+    padding: $space-5 $space-10;
+    font-size: $fs-lg;
+  }
+}
+
+// ── Link arrow ────────────────────────────────
+.link-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: $space-2;
+  font-family: $font-display;
+  font-size: $fs-sm;
+  font-weight: $fw-semibold;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $color-gold;
+  transition: gap $transition-base, color $transition-base;
+
+  &::after {
+    content: '→';
+    transition: transform $transition-base;
+  }
+
+  &:hover {
+    color: color.scale($color-gold, $lightness: 10%);
+    &::after {
+      transform: translateX(4px);
+    }
+  }
+}
