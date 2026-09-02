@@ -12,7 +12,6 @@
   -webkit-backdrop-filter: blur(12px);
   border-bottom: $border-width solid $color-border;
   transition: background-color $transition-base, border-color $transition-base;
-
   @include respond-to(md) {
     height: $header-height;
   }
@@ -40,7 +39,7 @@
 
     .logo-text {
       font-family: $font-display;
-      font-size: $fs-lg;
+      font-size: $fs-md;
       font-weight: $fw-extrabold;
       letter-spacing: 0.12em;
       text-transform: uppercase;
@@ -99,6 +98,7 @@
 
   @include respond-to(lg) {
     display: block;
+    margin: 0 $space-5 0 auto;
   }
 
   &__list {
@@ -107,7 +107,7 @@
 
   &__link {
     font-family: $font-display;
-    font-size: $fs-sm;
+    font-size: $fs-xs;
     font-weight: $fw-semibold;
     letter-spacing: 0.08em;
     text-transform: uppercase;
@@ -119,11 +119,13 @@
       content: '';
       position: absolute;
       bottom: -3px;
-      left: 0;
-      width: 0;
+      left: 50%;                 
+      transform: translateX(-50%) scaleX(0); 
+      width: 100%;               
       height: 1px;
       background-color: $color-gold;
-      transition: width $transition-base;
+      transition: transform $transition-base;
+      transform-origin: center;
     }
 
     &:hover,
@@ -131,7 +133,7 @@
       color: $color-text-primary;
 
       &::after {
-        width: 100%;
+        transform: translateX(-50%) scaleX(1);
       }
     }
   }

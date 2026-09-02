@@ -30,7 +30,7 @@
 
   &__headline {
     font-family: $font-display;
-    font-size: clamp($fs-4xl, 10vw, $fs-5xl);
+    font-size: clamp($fs-3xl, 10vw, $fs-4xl);
     font-weight: $fw-extrabold;
     line-height: $lh-tight;
     text-transform: uppercase;
