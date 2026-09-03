@@ -2,9 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Armored Panda Industries" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>KingPandaDefense</title>
   </head>
   <body>
@@ -41,12 +44,20 @@
   <main id="main-content">
 
     <section class="hero" aria-labelledby="hero-headline">
-      <div class="hero__bg" aria-hidden="true"></div>
       <div class="container hero__content">
         <h1 class="hero__headline" id="hero-headline">
           Built for<br />
           <span class="hero__headline--accent">Hostile Terrain.</span>
         </h1>
+        <div class="hero__actions">
+          <button class="btn-primary site-nav__cta" type="button">
+            <span class="btn-primary__circle" aria-hidden="true"></span>
+              <span class="btn-primary__default">Book Now</span>
+              <span class="btn-primary__hover" aria-hidden="true">
+              <span class="btn-primary__hover-text">Book a Briefing</span>
+            </span>
+          </button>
+        </div>
       </div>
     </section>
 
@@ -270,7 +281,7 @@
       </div>
     </section>
 
-    <section class="contact" id="contact" aria-labelledby="contact-heading">
+    <section class="contact" id="contact" aria-labelledby="contact-heading" hidden>
       <div class="container">
         <header class="section-header">
           <h2 class="section-header__title" id="contact-heading">Request a Briefing</h2>
@@ -326,7 +337,6 @@
           <ul>
             <li><a href="#vehicles">Vehicles</a></li>
             <li><a href="#services">Services</a></li>
-            <li><a href="#specifications">Specifications</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>

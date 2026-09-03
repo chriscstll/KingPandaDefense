@@ -105,7 +105,6 @@
 
   .section-header__title {
     color: $color-base;
-    border-left-color: $color-base;
   }
 }
 
@@ -264,7 +263,7 @@
   }
 
   &__callout {
-    border-left: 3px solid $color-gold;
+    border-left: 1px solid $color-border;
     padding-left: $space-8;
   }
 

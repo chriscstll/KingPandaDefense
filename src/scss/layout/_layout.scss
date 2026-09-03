@@ -21,7 +21,6 @@
     font-weight: $fw-extrabold;
     text-transform: uppercase;
     letter-spacing: 0.04em;
-    @include accent-bar;
     margin-bottom: $space-4;
 
     @include respond-to(md) {

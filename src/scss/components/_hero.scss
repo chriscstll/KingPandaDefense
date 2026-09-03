@@ -13,13 +13,6 @@
     height: auto;
     min-height: 100svh;
   }
-  &__bg {
-     @include fill;
-    background-color: $color-base;
-    background-image: url('/images/bg1.png');
-    background-size: cover;
-    background-position: center;
-  }
 
   &__content {
     position: relative;
@@ -43,6 +36,11 @@
       display: block;
       color: $color-gold;
     }
+  }
+
+   &__actions {
+    @include flex(row, center, flex-start, $space-4);
+    flex-wrap: wrap;
   }
 }
 

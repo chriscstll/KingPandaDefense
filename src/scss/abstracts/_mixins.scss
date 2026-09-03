@@ -42,11 +42,6 @@
   border: 0;
 }
 
-@mixin accent-bar($width: 3px, $color: $color-gold) {
-  border-left: $width solid $color;
-  padding-left: $space-5;
-}
-
 @mixin focus-ring {
   outline: 2px solid $color-gold;
   outline-offset: 3px;
@@ -63,20 +58,5 @@
 
   @include respond-to(lg) {
     padding-block: $space-32;
-  }
-}
-
-@mixin text-gradient-gold {
-  background: linear-gradient(90deg, $color-gold, lighten($color-gold, 15%));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-@mixin hover-lift($y: -4px) {
-  transition: transform $transition-base, box-shadow $transition-base;
-  &:hover {
-    transform: translateY($y);
-    box-shadow: $shadow-lg;
   }
 }
