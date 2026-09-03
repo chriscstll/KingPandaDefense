@@ -1,0 +1,178 @@
+@use '../abstracts' as *;
+
+.vehicle-modal {
+  position: fixed;
+  inset: 0;
+  z-index: $z-modal;
+  @include flex(row, center, center);
+  padding: $space-4;
+
+  &[hidden] { display: none; }
+
+  // ── Backdrop ────────────────────────────────
+  &__backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba($color-base, 0.88);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    animation: fadeIn 0.25s ease forwards;
+  }
+
+  // ── Window ──────────────────────────────────
+  &__window {
+    position: relative;
+    z-index: 1;
+    background: $color-surface;
+    border: $border-width solid $color-border;
+    border-radius: $radius-base;
+    width: 100%;
+    max-width: 800px;
+    max-height: 90vh;
+    overflow-y: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    animation: modalIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+
+    @include respond-to(md) {
+      grid-template-columns: 1fr 1fr;
+      max-height: 85vh;
+      overflow: hidden;
+    }
+  }
+
+  // ── Close button ────────────────────────────
+  &__close {
+    position: absolute;
+    top: $space-4;
+    right: $space-4;
+    z-index: 2;
+    width: 32px;
+    height: 32px;
+    @include flex(row, center, center);
+    background: rgba($color-base, 0.6);
+    border: $border-width solid $color-border;
+    border-radius: 50%;
+    color: $color-text-secondary;
+    font-size: $fs-sm;
+    cursor: pointer;
+    transition: color $transition-fast, border-color $transition-fast, background $transition-fast;
+
+    &:hover {
+      color: $color-text-primary;
+      border-color: $color-gold;
+      background: rgba($color-base, 0.9);
+    }
+
+    &:focus-visible { @include focus-ring; }
+  }
+
+  // ── Image ───────────────────────────────────
+  &__img-wrap {
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    background: $color-surface-raised;
+    flex-shrink: 0;
+
+    @include respond-to(md) {
+      aspect-ratio: auto;
+      min-height: 100%;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  }
+
+  // ── Content ─────────────────────────────────
+  &__content {
+    padding: $space-8;
+    display: flex;
+    flex-direction: column;
+    gap: $space-4;
+    overflow-y: auto;
+  }
+
+  &__tag {
+    font-family: $font-display;
+    font-size: $fs-xs;
+    font-weight: $fw-bold;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: $color-gold;
+  }
+
+  &__name {
+    font-family: $font-display;
+    font-size: $fs-2xl;
+    font-weight: $fw-bold;
+    color: $color-text-primary;
+    line-height: $lh-snug;
+  }
+
+  &__desc {
+    font-size: $fs-sm;
+    line-height: $lh-relaxed;
+    color: $color-text-secondary;
+    max-width: none;
+  }
+
+  // ── Specs ───────────────────────────────────
+  &__specs {
+    display: flex;
+    flex-direction: column;
+    border-top: $border-width solid $color-border;
+    margin-top: $space-2;
+  }
+
+  // ── CTA ─────────────────────────────────────
+  &__cta {
+    align-self: flex-start;
+    margin-top: $space-2;
+    text-decoration: none;
+  }
+}
+
+.spec-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: $space-4;
+  padding: $space-3 0;
+  border-bottom: $border-width solid $color-border;
+
+  dt {
+    font-size: $fs-xs;
+    font-weight: $fw-semibold;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: $color-text-secondary;
+    flex-shrink: 0;
+  }
+
+  dd {
+    font-size: $fs-sm;
+    color: $color-text-primary;
+    text-align: right;
+  }
+}
+
+// ── Animations ──────────────────────────────────
+@keyframes modalIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
