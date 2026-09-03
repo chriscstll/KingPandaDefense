@@ -18,21 +18,28 @@ export function initVehiclesModal() {
         mainImg.src = images[0] || ''
         mainImg.alt = ''
         thumbsEl.innerHTML = ''
+
+        const thumbEls = []
         images.forEach((src, i) => {
             const thumb = document.createElement('div')
-            thumb.className = 'vehicle-modal__thumb' + (i === 0 ? 'is-active' : '')
+            thumb.className = 'vehicle-modal__thumb'
             
             const img = document.createElement('img')
             img.src = src
             img.alt = `View ${i + 1}`
-            img.loading = 'lazy'
+            img.loading = 0 ? 'eager' : 'lazy'
             thumb.appendChild(img)
+            thumbsEl.appendChild(thumb) 
+            thumbEls.push(thumb)
             thumb.addEventListener('click', () => {
                 mainImg.src = src
-                setActiveThumb(i)
+                thumbEls.forEach(t => t.classList.remove('is-active')) 
+                thumb.classList.add('is-active')
             })
-            thumbsEl.appendChild(thumb)
         })
+        if (thumbEls.length > 0) {
+            thumbEls[0].classList.add('is-active')
+        }
     }
 
     function openModal(card) {
