@@ -1,13 +1,7 @@
 @use '../abstracts' as *;
 @use "sass:color";
 
-// ─────────────────────────────────────────────────
-// ARMORY INDUSTRIES — Sections
-// ─────────────────────────────────────────────────
-
-// ═══════════════════════════════════════════════
-// VEHICLES
-// ═══════════════════════════════════════════════
+//  VEHICLES
 .vehicles {
   @include section-spacing;
   background-color: $color-base;
@@ -99,13 +93,16 @@
   }
 }
 
+//  SERVICES
 .services {
   @include section-spacing;
-  background-color: $color-gold;
-
-  .section-header__title {
-    color: $color-base;
+  &__inner {
+    background-color: $color-gold;
   }
+
+}
+.other-services {
+  background-color: ($color-surface-raised);
 }
 
 .services-list {
@@ -120,7 +117,7 @@
 }
 
 .services-item {
-  @include flex(row, flex-start, flex-start, $space-6);
+  @include flex(row, center, center, $space-6);
   padding: $space-8 $space-4 $space-8 0;
   border-bottom: $border-width solid rgba($color-base, 0.2);
 
@@ -131,16 +128,6 @@
       border-right: $border-width solid rgba($color-base, 0.2);
       padding-right: $space-8;
     }
-  }
-
-  &__number {
-    font-family: $font-display;
-    font-size: $fs-sm;
-    font-weight: $fw-bold;
-    letter-spacing: 0.12em;
-    color: rgba($color-base, 0.4);
-    flex-shrink: 0;
-    margin-top: 3px;
   }
 
   &__title {
@@ -159,81 +146,51 @@
   }
 }
 
+//  OTHER SERVICES
+.other-services-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  border-top: $border-width solid rgba($color-base, 0.2);
 
-// ═══════════════════════════════════════════════
-// SPECIFICATIONS
-// ═══════════════════════════════════════════════
-.specifications {
-  @include section-spacing;
-  background-color: $color-surface;
+  @include respond-to(md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-.spec-table-wrap {
-  overflow-x: auto;
-  border: $border-width solid $color-border;
-  border-radius: $radius-base;
-}
+.other-services-item {
+  @include flex(row, center, center, $space-6);
+  padding: $space-8 $space-4 $space-8 0;
+  border-bottom: $border-width solid rgba($color-base, 0.2);
 
-.spec-table {
-  width: 100%;
-  min-width: 600px;
+  @include respond-to(md) {
+    padding: $space-6 $space-6 $space-8 $space-8;
 
-  thead {
-    background-color: $color-surface-raised;
-    border-bottom: $border-width-lg solid $color-gold;
+    &:nth-child(odd) {
+      border-right: $border-width solid rgba($color-base, 0.2);
+      padding-right: $space-8;
+    }
   }
 
-  th, td {
-    padding: $space-4 $space-6;
-    text-align: left;
-    font-size: $fs-sm;
-    border-bottom: $border-width solid $color-border;
-  }
-
-  thead th {
+  &__title {
     font-family: $font-display;
+    font-size: $fs-xl;
     font-weight: $fw-bold;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
     color: $color-text-primary;
-    font-size: $fs-xs;
-
-    &:first-child {
-      color: $color-text-secondary;
-    }
+    margin-bottom: $space-3;
   }
 
-  tbody {
-    th[scope="row"] {
-      font-weight: $fw-medium;
-      color: $color-text-secondary;
-      width: 200px;
-    }
-
-    td {
-      color: $color-text-primary;
-      font-variant-numeric: tabular-nums;
-    }
-
-    tr {
-      transition: background-color $transition-fast;
-
-      &:hover {
-        background-color: rgba($color-gold, 0.04);
-      }
-
-      &:last-child th,
-      &:last-child td {
-        border-bottom: none;
-      }
-    }
+  &__desc {
+    font-size: $fs-sm;
+    color: rgba($color-text-secondary, 0.72);
+    line-height: $lh-relaxed;
+    max-width: 48ch;
   }
 }
 
 
-// ═══════════════════════════════════════════════
-// ABOUT
-// ═══════════════════════════════════════════════
+
+//  ABOUT
 .about {
   @include section-spacing;
   background-color: $color-base;
@@ -279,9 +236,7 @@
 }
 
 
-// ═══════════════════════════════════════════════
-// CONTACT
-// ═══════════════════════════════════════════════
+//  CONTACT
 .contact {
   @include section-spacing;
   background-color: $color-surface;
@@ -375,9 +330,7 @@
 }
 
 
-// ═══════════════════════════════════════════════
-// FOOTER
-// ═══════════════════════════════════════════════
+//  FOOTER
 .site-footer {
   background-color: $color-base;
   border-top: $border-width solid $color-border;

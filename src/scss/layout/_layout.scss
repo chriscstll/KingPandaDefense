@@ -22,11 +22,13 @@
     text-transform: uppercase;
     letter-spacing: 0.04em;
     margin-bottom: $space-4;
+    padding-top: $space-4;
 
     @include respond-to(md) {
       font-size: $fs-4xl;
     }
   }
+  
   &__desc {
     font-size: $fs-md;
     color: $color-text-secondary;
