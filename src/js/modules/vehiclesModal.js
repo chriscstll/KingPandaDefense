@@ -61,6 +61,24 @@ export function initVehiclesModal() {
         document.body.style.overflow = ''
     }
 
+    document.querySelectorAll('.vehicle-card__trigger').forEach(trigger => {
+        trigger.addEventListener('click', () => {
+            openModal(trigger.closest('.vehicle-card'))
+        })
+        trigger.addEventListener('keydown', e => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault()
+                openModal(trigger.closest('.vehicle-card'))
+            }
+        })
+    })
     
-    
+    backdrop?.addEventListener('click', closeModal)
+    closeBtn?.addEventListener('click', closeModal)
+    modal.querySelector('.vehicle-modal__cta')?.addEventListener('click', closeModal)
+
+    document.addEventListener('keydown', e => {
+        if (e.key === 'Escape' && !modal.hasAttribute('hidden')) 
+            closeModal()
+    })
 }
