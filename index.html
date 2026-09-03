@@ -162,9 +162,18 @@
       <div class="vehicle-modal__backdrop"></div>
       <div class="vehicle-modal__window">
         <button class="vehicle-modal__close" aria-label="Close">✕</button>
-        <div class="vehicle-modal__img-wrap">
-          <img src="" alt="">
+
+        <!-- Left side — image gallery -->
+        <div class="vehicle-modal__gallery">
+          <div class="vehicle-modal__main-img">
+            <img src="" alt="" id="modal-main-img" />
+          </div>
+          <div class="vehicle-modal__thumbs" id="modal-thumbs">
+            <!-- JS populates thumbnails -->
+          </div>
         </div>
+
+        <!-- Right side — content -->
         <div class="vehicle-modal__content">
           <span class="vehicle-modal__tag" id="modal-tag"></span>
           <h2 class="vehicle-modal__name" id="modal-name"></h2>
@@ -187,11 +196,11 @@
               <dd id="modal-runflat"></dd>
             </div>
             <div class="spec-row">
-              <dt>Production Time</dt>
+              <dt>Lead Time</dt>
               <dd id="modal-lead"></dd>
             </div>
           </dl>
-            <a href="#contact" class="btn vehicle-modal__cta">Request a Quote</a>
+          <a href="#contact" class="btn-primary vehicle-modal__cta">Request a Quote</a>
         </div>
       </div>
     </div>
