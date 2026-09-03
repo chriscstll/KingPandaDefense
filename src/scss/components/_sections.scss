@@ -290,7 +290,7 @@
   }
 
   &:hover {
-    border-color: color.scale($color-border, $lightness: -4%);
+    border-color: $color-gold-dim;
   }
 
   &:focus {
@@ -352,10 +352,17 @@
     @include flex(row, center, flex-start, $space-3);
     flex-wrap: wrap;
 
-    .logo-mark {
-      color: $color-gold;
-      font-size: $fs-md;
+    .logo-img {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+    flex-shrink: 0;
+
+    @include respond-to(md) {
+      width: 42px;
+      height: 42px;
     }
+  }
 
     .logo-text {
       font-family: $font-display;
