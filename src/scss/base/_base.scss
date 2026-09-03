@@ -95,3 +95,6 @@ table {
     background: $color-gold-dim;
   }
 }
+html.sr .load-hidden {
+    visibility: hidden;
+}
