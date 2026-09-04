@@ -6,11 +6,23 @@ export function initVehiclesModal() {
     const thumbsEl = document.getElementById('modal-thumbs')
     if (!modal) return
 
-    const fields = ['tag', 'name', 'desc', 'protection', 'glass', 'weight', 'runflat', 'lead']
+    const fields = ['tag', 'name', 'desc', 'protection', 'glass', 'weight', 'runflat']
 
     function setActiveThumb(index) {
         const thumbs = thumbsEl.querySelectorAll('.vehicle-modal__thumb')
         thumbs.forEach((t, i) => t.classList.toggle('is-active', i === index))
+    }
+
+    function buildUpgrades(upgrades) {
+        const el = document.getElementById('modal-upgrades')
+        if (!el) return
+
+        el.innerHTML = ''
+        upgrades.forEach(item => {
+            const li = document.createElement('li')
+            li.textContent = item
+            el.appendChild(li)
+        })
     }
 
     function buildGallery(images) {
@@ -47,6 +59,15 @@ export function initVehiclesModal() {
             const el = document.getElementById(`modal-${field}`)
             if (el) el.textContent = card.dataset[`modal${field.charAt(0).toUpperCase() + field.slice(1)}`] || ''
         })
+
+        let upgrades = []
+        try {
+            upgrades = JSON.parse(card.dataset.modalUpgrades || '[]')
+        } catch {
+            upgrades = []
+        }
+        buildUpgrades(upgrades)
+
         let images = []
         try {
             images = JSON.parse(card.dataset.modalImages || '[]')
