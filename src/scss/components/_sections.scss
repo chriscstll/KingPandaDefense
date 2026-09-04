@@ -43,23 +43,6 @@
     background-color: $color-surface-raised;
   }
 
-  &__img-placeholder {
-    width: 100%;
-    height: 100%;
-    background:
-      linear-gradient(135deg, $color-surface-raised 25%, $color-border 100%);
-
-    // Diagonal line texture
-    background-image:
-      repeating-linear-gradient(
-        -55deg,
-        rgba(255, 255, 255, 0.025) 0px,
-        rgba(255, 255, 255, 0.025) 1px,
-        transparent 1px,
-        transparent 10px
-      );
-  }
-
   &__body {
     padding: $space-6;
     display: flex;
