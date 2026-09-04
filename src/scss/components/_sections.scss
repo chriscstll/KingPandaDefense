@@ -332,87 +332,137 @@
 
 //  FOOTER
 .site-footer {
-  background-color: $color-base;
-  border-top: $border-width solid $color-border;
-  padding-block: $space-12;
+  --footer-bg: #0f1115;
+  --footer-fg: #e6e8eb;
+  --footer-muted: #8a8f98;
+  --footer-accent: #c9a24b;
+  --footer-border: rgba(255, 255, 255, 0.08);
+
+  background: var(--footer-bg);
+  color: var(--footer-fg);
+  padding-block: clamp(3rem, 6vw, 5rem) 1.5rem;
+  font-size: 0.95rem;
 
   &__inner {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: $space-8;
+    gap: clamp(2rem, 5vw, 4rem);
+    grid-template-columns: 1.4fr 1fr 1fr;
 
-    @include respond-to(md) {
-      grid-template-columns: auto 1fr auto;
-      align-items: center;
-      gap: $space-10;
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
     }
   }
 
   &__brand {
-    @include flex(row, center, flex-start, $space-3);
-    flex-wrap: wrap;
-
     .logo-img {
-    width: 36px;
-    height: 36px;
-    object-fit: contain;
-    flex-shrink: 0;
-
-    @include respond-to(md) {
-      width: 42px;
-      height: 42px;
+      height: 32px;
+      width: auto;
+      margin-bottom: 0.75rem;
     }
-  }
 
     .logo-text {
-      font-family: $font-display;
-      font-size: $fs-md;
-      font-weight: $fw-extrabold;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
+      display: block;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      font-size: 1rem;
 
       em {
+        display: block;
         font-style: normal;
-        color: $color-gold;
-        font-weight: $fw-light;
+        font-weight: 400;
+        color: var(--footer-muted);
+        letter-spacing: 0.08em;
+        font-size: 0.75rem;
       }
     }
   }
 
   &__tagline {
-    width: 100%;
-    font-size: $fs-xs;
-    color: $color-text-secondary;
-    letter-spacing: 0.05em;
-    margin-top: $space-1;
-    max-width: none;
+    margin-top: 0.75rem;
+    color: var(--footer-muted);
+    max-width: 28ch;
   }
 
-  &__nav {
-    ul {
-      @include flex(row, center, flex-start, $space-6);
-      flex-wrap: wrap;
-    }
+  &__social {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+    padding: 0;
+    list-style: none;
 
     a {
-      font-family: $font-display;
-      font-size: $fs-xs;
-      font-weight: $fw-semibold;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: $color-text-secondary;
-      transition: color $transition-fast;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: 1px solid var(--footer-border);
+      transition: border-color 0.2s ease, background-color 0.2s ease, transform 0.15s ease;
+
+      svg {
+        width: 16px;
+        height: 16px;
+        fill: var(--footer-fg);
+      }
 
       &:hover {
-        color: $color-gold;
+        border-color: var(--footer-accent);
+        background-color: rgba(201, 162, 75, 0.08);
+        transform: translateY(-2px);
       }
     }
   }
 
+  &__heading {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--footer-muted);
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+
+  &__contact {
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+    }
+
+    a {
+      color: var(--footer-fg);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: var(--footer-accent);
+      }
+    }
+
+    svg {
+      width: 16px;
+      height: 16px;
+      fill: currentColor;
+      flex-shrink: 0;
+    }
+  }
+
   &__legal {
-    font-size: $fs-xs;
-    color: rgba($color-text-secondary, 0.6);
-    max-width: none;
-    text-align: right;
+    margin-top: clamp(2rem, 5vw, 3.5rem);
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--footer-border);
+    text-align: center;
+    color: var(--footer-muted);
+    font-size: 0.8rem;
+    max-width: 60ch;
+    margin-inline: auto;
   }
 }
