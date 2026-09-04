@@ -7,7 +7,15 @@
     <link rel="icon" type="image/png" href="/images/logo.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=DM+Sans:opsz,wght@9..40,400;9..40,500&display=swap"
+      rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript>
+      <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=DM+Sans:opsz,wght@9..40,400;9..40,500&display=swap" rel="stylesheet" />
+    </noscript>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>KingPandaDefense</title>
   </head>
@@ -36,6 +44,31 @@
 
   <main id="main-content">
     <section class="hero" aria-labelledby="hero-headline">
+      <div class="hero__bg" aria-hidden="true">
+        <video
+          class="hero__video"
+          autoplay
+          muted
+          loop
+          playsinline
+          fetchpriority="high"
+          preload="auto"
+          poster="/images/bg1.png">
+          <!-- Mobile — smaller file -->
+          <source
+            media="(max-width: 768px)"
+            srcset="/videos/hero-mobile.webm"
+            type="video/webm" />
+          <source
+            media="(max-width: 768px)"
+            srcset="/videos/hero-mobile.mp4"
+            type="video/mp4" />
+          <!-- Desktop -->
+          <source src="/images/bg-video.mp4"  type="video/mp4" />
+        </video>
+      </div>
+      <div class="hero__overlay" aria-hidden="true"></div>
+
       <div class="container hero__content">
         <h1 class="hero__headline reveal-scale" id="hero-headline">
           Build to protect.<br />
@@ -312,38 +345,38 @@
           <h2 class="section-header__title" id="services-heading">Our Services</h2>
         </header>
         <ul class="services-list" role="list">
-          <li class="services-item reveal-left">
-            <div class="services-item__body">
+          <li class="services-item">
+            <div class="services-item__body reveal-left">
               <h3 class="services-item__title">Ballistic Glass Replacement</h3>
               <p class="services-item__desc">Factory glass replaced with multi-layered ballistic-resistant glazing. Optically clear, rated to B6/B7, and fitted to your vehicle's exact window geometry without altering its appearance.</p>
             </div>
           </li>
-          <li class="services-item reveal-right">
-            <div class="services-item__body">
+          <li class="services-item">
+            <div class="services-item__body reveal-right">
               <h3 class="services-item__title">Body & Door Armoring</h3>
               <p class="services-item__desc">Doors, pillars, floor, and roof lined with ballistic steel or composite panels. Full cabin coverage fitted around your vehicle's original frame — no structural compromise, no visible change.</p>
             </div>
           </li>
-          <li class="services-item reveal-left">
-            <div class="services-item__body">
+          <li class="services-item">
+            <div class="services-item__body reveal-left">
               <h3 class="services-item__title">Run-Flat Tire System</h3>
               <p class="services-item__desc">Internal run-flat inserts fitted to your existing wheels. Maintains full vehicle control and mobility for up to 80km after complete tire failure — no spare required.</p>
             </div>
           </li>
-          <li class="services-item reveal-right">
-            <div class="services-item__body">
+          <li class="services-item">
+            <div class="services-item__body reveal-right">
               <h3 class="services-item__title">Suspension & Brake Upgrade</h3>
               <p class="services-item__desc">Reinforced suspension and upgraded brake systems calibrated to handle the added weight of armor without affecting ride comfort or handling characteristics your client expects.</p>
             </div>
           </li>
-          <li class="services-item reveal-left">
-            <div class="services-item__body">
+          <li class="services-item">
+            <div class="services-item__body reveal-left">
               <h3 class="services-item__title">Discreet Add-On Systems</h3>
               <p class="services-item__desc">Optional secondary systems fitted on request — intercom, emergency lighting, GPS tracking, and interior emergency exits. Integrated cleanly so the vehicle reads as civilian at all times.</p>
             </div>
           </li>
-          <li class="services-item reveal-right">
-            <div class="services-item__body">
+          <li class="services-item">
+            <div class="services-item__body reveal-right">
               <h3 class="services-item__title">Certification & Documentation</h3>
               <p class="services-item__desc">Every build leaves with a full certification report — protection level achieved, materials used, and test results. Required for insurance, government compliance, and border documentation.</p>
             </div>
@@ -354,23 +387,23 @@
       
       <div class="container other-services">
         <header class="section-header section-header--light reveal-scale">
-          <h2 class="section-header__title" id="services-heading" style="color: #E8E8E8;">Other Services</h2>
+          <h2 class="section-header__title" id="services-heading" style="color: #E8E8E8;">Tactical & Support Equipment</h2>
         </header>
         <ul class="other-services-list">
-          <li class="services-item reveal-left">
-            <div class="other-services-item__body">
+          <li class="services-item">
+            <div class="other-services-item__body reveal-left">
               <h3 class="other-services-item__title">Certification & Documentation</h3>
               <p class="other-services-item__desc">Every build leaves with a full certification report — protection level achieved, materials used, and test results. Required for insurance, government compliance, and border documentation.</p>
             </div>
           </li>
-          <li class="other-services-item reveal-right">
-            <div class="other-services-item__body">
+          <li class="other-services-item">
+            <div class="other-services-item__body reveal-right">
               <h3 class="other-services-item__title">Certification & Documentation</h3>
               <p class="other-services-item__desc">Every build leaves with a full certification report — protection level achieved, materials used, and test results. Required for insurance, government compliance, and border documentation.</p>
             </div>
           </li>
-          <li class="other-services-item reveal-left">
-            <div class="other-services-item__body">
+          <li class="other-services-item">
+            <div class="other-services-item__body reveal-left">
               <h3 class="other-services-item__title">Certification & Documentation</h3>
               <p class="other-services-item__desc">Every build leaves with a full certification report — protection level achieved, materials used, and test results. Required for insurance, government compliance, and border documentation.</p>
             </div>
