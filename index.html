@@ -1,0 +1,540 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Armored Panda Industries" />
+    <link rel="icon" type="image/png" href="/KingPandaDefense/images/logo.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=DM+Sans:opsz,wght@9..40,400;9..40,500&display=swap" rel="stylesheet" media="print" onload="this.media='all'"/>
+    <noscript>
+      <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=DM+Sans:opsz,wght@9..40,400;9..40,500&display=swap" rel="stylesheet" />
+    </noscript>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>KingPandaDefense</title>
+    <script type="module" crossorigin src="/KingPandaDefense/assets/index-CxUHmjsj.js"></script>
+    <link rel="stylesheet" crossorigin href="/KingPandaDefense/assets/index-0OUe1U8A.css">
+  </head>
+  <body>
+  <header id="site-header" class="site-header">
+    <div class="container site-header__inner">
+      <a href="" class="site-header__logo" aria-label="Logo">
+        <img src="/KingPandaDefense/images/logo.jpg" alt="Armored Panda Industries" class="logo-img">
+        <span class="logo-text">Armored Panda Industries</span>
+      </a>
+
+      <nav class="site-nav">
+        <ul class="site-nav__list">
+          <li><a href="#vehicles" class="site-nav__link">Vehicles</a></li>
+          <li><a href="#services" class="site-nav__link">Services</a></li>
+          <li><a href="#about" class="site-nav__link">About</a></li>
+          <li><a href="#contact" class="site-nav__link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button class="site-header__toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="site-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+  <div class="nav-overlay" id="nav-overlay"></div>
+
+  <main id="main-content">
+    <section class="hero" aria-labelledby="hero-headline">
+      <div class="hero__bg" aria-hidden="true">
+        <video
+          class="hero__video"
+          autoplay
+          muted
+          loop
+          playsinline
+          fetchpriority="high"
+          preload="auto"
+          poster="/KingPandaDefense/images/bg1.png">
+          <!-- Mobile — smaller file -->
+          <source
+            media="(max-width: 768px)"
+            srcset="/videos/hero-mobile.webm"
+            type="video/webm" />
+          <source
+            media="(max-width: 768px)"
+            srcset="/videos/hero-mobile.mp4"
+            type="video/mp4" />
+          <!-- Desktop -->
+          <source src="/KingPandaDefense/images/bg-video.mp4"  type="video/mp4" />
+        </video>
+      </div>
+      <div class="hero__overlay" aria-hidden="true"></div>
+
+      <div class="container hero__content">
+        <h1 class="hero__headline reveal-scale" id="hero-headline">
+          Build to protect.<br />
+          <span class="hero__headline--accent">Driven to lead.</span>
+        </h1>
+        <div class="hero__actions reveal-top">
+          <button class="btn-primary site-nav__cta" type="button">
+            <span class="btn-primary__circle" aria-hidden="true"></span>
+              <span class="btn-primary__default">Book a Briefing</span>
+              <span class="btn-primary__hover" aria-hidden="true">
+              <span class="btn-primary__hover-text">Book Now</span>
+            </span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="vehicles" id="vehicles" aria-labelledby="vehicles-heading">
+      <div class="container">
+        <div class="vehicle-grid">
+          <header class="section-header reveal-scale">
+            <h2 class="section-header__title" id="vehicles-heading">Vehicles We Armor</h2>
+            <p class="section-header__desc">
+              We work on your vehicle. Bring us what you drive — we fit the protection around it.
+            </p>
+          </header>
+
+            <article class="vehicle-card reveal-card" data-index="01" data-modal-tag="Full-Size Flagship SUV"
+              data-modal-name="Nissan Patrol Y63"
+              data-modal-protection="Full Armor Level B6"
+              data-modal-glass="GL-1: 38mm BR6-NS"
+              data-modal-weight="+750kg over factory"
+              data-modal-runflat="Runflat inserts in OEM Wheel"
+              data-modal-upgrades='[
+                "Roof Protection",
+                "Front Engine Protection",
+                "Floor Blast Protection",
+                "Fuel Tank Protection",
+                "Heavy Duty Door Hinges",
+                "Reinforced Body",
+                "Complete Suspension Replacement",
+                "Upgraded Brake System"
+              ]'
+              data-modal-images='[
+              "/images/patrol-1.jpg",
+              "/images/patrol-2.jpg",
+              "/images/patrol-3.jpg",
+              "/images/patrol-4.jpg",
+              "/images/patrol-5.jpg",
+              "/images/patrol-6.jpg"
+            ]'>
+              <div class="vehicle-card__img-wrap vehicle-card__trigger" role="button" tabindex="0" aria-haspopup="dialog" aria-label="View details for Nissan Patrol Y63">
+                <img src="/KingPandaDefense/images/patrol-1.jpg" alt="Nissan Patrol Y63">
+                <div class="vehicle-card__img-overlay" aria-hidden="true">
+                  <span>View Details</span>
+                </div>
+              </div>
+              <div class="vehicle-card__body reveal-top">
+                <span class="vehicle-card__tag">Full-Size Flagship SUV</span>
+                <h3 class="vehicle-card__name">Nissan Patrol Y63</h3>
+                <p class="vehicle-card__desc">
+                  High-torque 3.5L Twin-Turbo V6 (700 Nm) handles the extra size and steel plating with strong highway acceleration.
+                </p>
+              </div>
+            </article>
+
+            <article class="vehicle-card reveal-card" data-index="02" data-modal-tag="Full-Size Heavy-Duty SUV"
+              data-modal-name="Toyota Land Cruiser 300"
+              data-modal-protection="Full Armor Level B6"
+              data-modal-glass="GL-1: 38mm BR6-NS"
+              data-modal-weight="+650kg over factory"
+              data-modal-runflat="Runflat inserts in OEM Wheel"
+              data-modal-upgrades='[
+                "Roof Protection",
+                "Front Engine Protection",
+                "Floor Blast Protection",
+                "Fuel Tank Protection",
+                "Heavy Duty Door Hinges",
+                "Reinforced Body",
+                "Complete Suspension Replacement",
+                "Upgraded Brake System"
+              ]'
+              data-modal-images='[
+              "/images/lc300-1.jpg",
+              "/images/lc300-2.jpg",
+              "/images/lc300-3.jpg",
+              "/images/lc300-4.jpg",
+              "/images/lc300-5.jpg",
+              "/images/lc300-6.jpg"
+            ]'>
+              <div class="vehicle-card__img-wrap vehicle-card__trigger" role="button" tabindex="0" aria-haspopup="dialog" aria-label="View details for Toyota Land Cruiser 300">
+                <img src="/KingPandaDefense/images/lc300-1.jpg" alt="Toyota Land Cruiser 300">
+                <div class="vehicle-card__img-overlay" aria-hidden="true">
+                  <span>View Details</span>
+                </div>
+              </div>
+              <div class="vehicle-card__body reveal-top">
+                <span class="vehicle-card__tag">Full-Size Heavy-Duty SUV</span>
+                <h3 class="vehicle-card__name">Toyota Land Cruiser 300</h3>
+                <p class="vehicle-card__desc">
+                  Lightweight aluminum panels from the factory offset armor weight, maximizing nimble on-road and off-road handling.
+                </p>
+              </div>
+            </article>
+
+         <article class="vehicle-card reveal-card" data-index="03" data-modal-tag="Full-Size Premium Van"
+              data-modal-name="Toyota Hiace"
+              data-modal-protection="Full Armor Level B6"
+              data-modal-glass="GL-1: 38mm BR6-NS"
+              data-modal-weight="+960kg over factory"
+              data-modal-runflat="Runflat inserts in OEM Wheel"
+              data-modal-upgrades='[
+                "Roof Protection",
+                "Front Engine Protection",
+                "Floor Blast Protection",
+                "Fuel Tank Protection",
+                "Heavy Duty Door Hinges",
+                "Reinforced Body",
+                "Complete Suspension Replacement",
+                "Upgraded Brake System"
+              ]'
+              data-modal-images='[
+                "/images/hiace-1.jpg",
+                "/images/hiace-2.jpg",
+                "/images/hiace-3.jpg",
+                "/images/hiace-4.jpg",
+                "/images/hiace-5.jpg",
+                "/images/hiace-6.jpg"
+              ]'>
+              <div class="vehicle-card__img-wrap vehicle-card__trigger" role="button" tabindex="0" aria-haspopup="dialog" aria-label="View details for Toyota Hiace Super Grandia Elite">
+                <img src="/KingPandaDefense/images/hiace-1.jpg" alt="Hiace Super Grandia Elite">
+                <div class="vehicle-card__img-overlay" aria-hidden="true">
+                  <span>View Details</span>
+                </div>
+              </div>
+              <div class="vehicle-card__body reveal-top">
+                <span class="vehicle-card__tag">Full-Size Premium Van</span>
+                <h3 class="vehicle-card__name">Toyota Hiace Super Grandia Elite</h3>
+                <p class="vehicle-card__desc">
+                  Massive interior VIP space, but requires structural door hinge welding to handle the largest glass surface area in the fleet.
+                </p>
+              </div>
+            </article>
+
+         <article class="vehicle-card reveal-card" data-index="04" data-modal-tag="Full-Size Premium SUV"
+              data-modal-name="Lincoln Navigator"
+              data-modal-protection="Full Armor Level B6"
+              data-modal-glass="GL-1: 38mm BR6-NS"
+              data-modal-weight="+800kg over factory"
+              data-modal-runflat="Runflat inserts in OEM Wheel"
+              data-modal-upgrades='[
+                "Roof Protection",
+                "Front Engine Protection",
+                "Floor Blast Protection",
+                "Fuel Tank Protection",
+                "Heavy Duty Door Hinges",
+                "Reinforced Body",
+                "Complete Suspension Replacement",
+                "Upgraded Brake System"
+              ]'
+              data-modal-images='[
+              "/images/navigator-1.jpg",
+              "/images/navigator-2.jpg",
+              "/images/navigator-3.jpg",
+              "/images/navigator-4.jpg",
+              "/images/navigator-5.jpg",
+              "/images/navigator-6.jpg"
+            ]'>
+              <div class="vehicle-card__img-wrap vehicle-card__trigger" role="button" tabindex="0" aria-haspopup="dialog" aria-label="View details for Lincoln Navigator">
+                <img src="/KingPandaDefense/images/navigator-1.jpg" alt="Lincoln Navigator">
+                <div class="vehicle-card__img-overlay" aria-hidden="true">
+                  <span>View Details</span>
+                </div>
+              </div>
+              <div class="vehicle-card__body reveal-top">
+                <span class="vehicle-card__tag">Full-Size Premium SUV</span>
+                <h3 class="vehicle-card__name">Lincoln Navigator</h3>
+                <p class="vehicle-card__desc">
+                  Rugged, boxed truck-chassis handles the vast armored cabin payload without structural sagging.
+                </p>
+              </div>
+            </article>
+
+          <article class="vehicle-card reveal-card" data-index="05" data-modal-tag="Full-Size Luxury SUV"
+              data-modal-name="Mercedes Benz G63"
+              data-modal-protection="Full Armor Level B6"
+              data-modal-glass="GL-1: 38mm BR6-NS"
+              data-modal-weight="+900kg over factory"
+              data-modal-runflat="Runflat inserts in OEM Wheel"
+              data-modal-upgrades='[
+                "Roof Protection",
+                "Front Engine Protection",
+                "Floor Blast Protection",
+                "Fuel Tank Protection",
+                "Heavy Duty Door Hinges",
+                "Reinforced Body",
+                "Complete Suspension Replacement",
+                "Upgraded Brake System"
+              ]'
+              data-modal-images='[
+              "/images/mercedes-1.jpg",
+              "/images/mercedes-2.jpg",
+              "/images/mercedes-3.jpg",
+              "/images/mercedes-4.jpg",
+              "/images/mercedes-5.jpg",
+              "/images/mercedes-6.jpg"
+            ]'>
+              <div class="vehicle-card__img-wrap vehicle-card__trigger" role="button" tabindex="0" aria-haspopup="dialog" aria-label="View details for Toyota Fortuner GR-S">
+                <img src="/KingPandaDefense/images/mercedes-1.jpg" alt="Toyota Fortuner GR-S">
+                <div class="vehicle-card__img-overlay" aria-hidden="true">
+                  <span>View Details</span>
+                </div>
+              </div>
+              <div class="vehicle-card__body reveal-top">
+                <span class="vehicle-card__tag">Full-Size Luxury SUV</span>
+                <h3 class="vehicle-card__name">Mercedes Benz G63</h3>
+                <p class="vehicle-card__desc">
+                  577-horsepower V8 easily moves the flat, heavy ballistic steel plates needed for its boxy profile.
+                </p>
+              </div>
+            </article>
+        </div>
+      </div>
+    </section>
+    <div class="vehicle-modal" id="vehicle-modal" role="dialog" aria-modal="true" aria-labelledby="modal-name" hidden>
+      <div class="vehicle-modal__backdrop"></div>
+      <div class="vehicle-modal__window">
+        <button class="vehicle-modal__close" aria-label="Close">✕</button>
+
+        <div class="vehicle-modal__gallery">
+          <div class="vehicle-modal__main-img">
+            <img src="" alt="" id="modal-main-img" />
+          </div>
+          <div class="vehicle-modal__thumbs" id="modal-thumbs">
+
+          </div>
+        </div>
+
+        <div class="vehicle-modal__content">
+          <span class="vehicle-modal__tag" id="modal-tag"></span>
+          <h2 class="vehicle-modal__name" id="modal-name"></h2>
+          <p class="vehicle-modal__desc" id="modal-desc"></p>
+          <dl class="vehicle-modal__specs">
+            <div class="spec-row">
+              <dt>Protection Level</dt>
+              <dd id="modal-protection"></dd>
+            </div>
+            <div class="spec-row">
+              <dt>Ballistic Glass</dt>
+              <dd id="modal-glass"></dd>
+            </div>
+            <div class="spec-row">
+              <dt>Added Weight</dt>
+              <dd id="modal-weight"></dd>
+            </div>
+            <div class="spec-row">
+              <dt>Run-Flat System</dt>
+              <dd id="modal-runflat"></dd>
+            </div>
+            <div class="vehicle-modal__upgrades">
+              <h4 class="vehicle-modal__upgrades-title">Mechanical Upgrades</h4>
+              <ul class="vehicle-modal__upgrades-list" id="modal-upgrades">
+              </ul>
+            </div>
+          </dl>
+          <a href="#contact" class="btn vehicle-modal__cta">Request a Quote</a>
+        </div>
+      </div>
+    </div>
+    
+    <section class="services" id="services" aria-labelledby="services-heading">
+      <div class="container services__inner">
+        <header class="section-header section-header--light reveal-scale">
+          <h2 class="section-header__title" id="services-heading">Our Services</h2>
+        </header>
+        <ul class="services-list" role="list">
+          <li class="services-item">
+            <div class="services-item__body reveal-left">
+              <h3 class="services-item__title">Ballistic Glass Replacement</h3>
+              <p class="services-item__desc">Factory glass replaced with multi-layered ballistic-resistant glazing. Optically clear, rated to B6/B7, and fitted to your vehicle's exact window geometry without altering its appearance.</p>
+            </div>
+          </li>
+          <li class="services-item">
+            <div class="services-item__body reveal-right">
+              <h3 class="services-item__title">Body & Door Armoring</h3>
+              <p class="services-item__desc">Doors, pillars, floor, and roof lined with ballistic steel or composite panels. Full cabin coverage fitted around your vehicle's original frame no structural compromise, no visible change.</p>
+            </div>
+          </li>
+          <li class="services-item">
+            <div class="services-item__body reveal-left">
+              <h3 class="services-item__title">Run-Flat Tire System</h3>
+              <p class="services-item__desc">Internal run flat inserts fitted to your existing wheels. Maintains full vehicle control and mobility for up to 80km after complete tire failure no spare required.</p>
+            </div>
+          </li>
+          <li class="services-item">
+            <div class="services-item__body reveal-right">
+              <h3 class="services-item__title">Suspension & Brake Upgrade</h3>
+              <p class="services-item__desc">Reinforced suspension and upgraded brake systems calibrated to handle the added weight of armor without affecting ride comfort or handling characteristics your client expects.</p>
+            </div>
+          </li>
+          <li class="services-item">
+            <div class="services-item__body reveal-left">
+              <h3 class="services-item__title">Discreet Add-On Systems</h3>
+              <p class="services-item__desc">Optional secondary systems fitted on request intercom, emergency lighting, GPS tracking, and interior emergency exits. Integrated cleanly so the vehicle reads as civilian at all times.</p>
+            </div>
+          </li>
+          <li class="services-item">
+            <div class="services-item__body reveal-right">
+              <h3 class="services-item__title">Certification & Documentation</h3>
+              <p class="services-item__desc">Every build leaves with a full certification report protection level achieved, materials used, and test results. Required for insurance, government compliance, and border documentation.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+ 
+      <div class="container other-services">
+        <header class="section-header section-header--light reveal-scale">
+          <h2 class="section-header__title" id="services-heading" style="color: #E8E8E8;">Tactical & Support Equipment</h2>
+        </header>
+        <ul class="other-services-list">
+          <li class="services-item">
+            <div class="other-services-item__body reveal-left">
+              <h3 class="other-services-item__title">Ballistic Helmets & Head Protection</h3>
+              <p class="other-services-item__desc">Provision of lightweight aramid and polyethylene helmets certified to NIJ Level IIIA. Delivers maximum fragment protection with integrated NVG and communication headset mounts.</p>
+            </div>
+          </li>
+          <li class="other-services-item">
+            <div class="other-services-item__body reveal-right">
+              <h3 class="other-services-item__title">Tactical Vests & Body Armor</h3>
+              <p class="other-services-item__desc">Supply of concealable carriers and tactical vests configurable up to NIJ Level III/IV. Engineered with premium hard armor plates to neutralize high-velocity armor-piercing rounds.</p>
+            </div>
+          </li>
+          <li class="other-services-item">
+            <div class="other-services-item__body reveal-left">
+              <h3 class="other-services-item__title">Specialized Firearms & Weapon</h3>
+              <p class="other-services-item__desc">Regulated procurement, custom tactical configuration, and certified maintenance of small arms. Specializing in optical integration and precision weapon-mount installations for armored platforms.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="about" id="about" aria-labelledby="about-heading">
+      <div class="container about__inner">
+        <div class="about__text">
+          <header class="section-header section-header--flush reveal-scale">
+            <h2 class="section-header__title" id="about-heading">Who We Are</h2>
+          </header>
+          <p class="reveal-left">
+            King Panda Defense is your trusted source for armored vehicles, executive protection, ballistic protection, security solutions, armored SUVs, bulletproof cars, VIP transport, and defense technology in the Philippines.
+          </p>
+          <p class="reveal-left">
+            Our facility in Katipunan Avenue, Quezon City houses comprehensive engineering, fabrication and ballistic testing infrastructure.
+          </p>
+          <button class="btn-primary site-nav__cta reveal-top" type="button">
+            <span class="btn-primary__circle" aria-hidden="true"></span>
+              <span class="btn-primary__default">Contact Us</span>
+              <span class="btn-primary__hover" aria-hidden="true">
+              <span class="btn-primary__hover-text">Book Now</span>
+            </span>
+          </button>
+        </div>
+        <div class="about__callout reveal-top" aria-hidden="true">
+          <blockquote class="about__quote">
+            "The standard is not adequacy.<br />The standard is no casualties."
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact" aria-labelledby="contact-heading">
+      <div class="container">
+        <header class="section-header reveal-scale">
+          <h2 class="section-header__title" id="contact-heading">Request a Briefing</h2>
+          <p class="section-header__desc">All inquiries are handled under NDA by default.</p>
+        </header>
+
+        <form class="contact-form reveal-scale" id="contact-form" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="name">Full Name</label>
+              <input class="form-input" type="text" id="name" name="name" required autocomplete="name" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="organization">Organization</label>
+              <input class="form-input" type="text" id="organization" name="organization" required autocomplete="organization" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="email">Email</label>
+            <input class="form-input" type="email" id="email" name="email" required autocomplete="email" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="interest">Area of Interest</label>
+            <select class="form-input form-select" id="interest" name="interest">
+              <option value="">Select platform or service…</option>
+              <option value="envoy">Ballistic & Explosive Protection Levels</option>
+              <option value="sentinel">Mechanical & Performance Upgrades</option>
+              <option value="rampart">Tactical Chauffeur & Convoy Services</option>
+              <option value="custom">Head & Torso Protection</option>
+              <option value="upgrade">Firearms & Weapon</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="message">Operational Requirements</label>
+            <textarea class="form-input form-textarea" id="message" name="message" rows="5" placeholder="Please provide a brief summary of your requested arrangements."></textarea>
+          </div>
+          <button class="btn" type="submit">Submit Request</button>
+          <p class="form-notice">Responses within 48 hours. All communications encrypted.</p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+    <footer class="site-footer">
+      <div class="container site-footer__inner">
+
+        <div class="site-footer__brand">
+          <img src="/KingPandaDefense/images/logo.jpg" alt="Armored Panda Industries" class="logo-img">
+          <span class="logo-text">ARMORED PANDA<em>INDUSTRIES</em></span>
+          <p class="site-footer__tagline">Purpose built. Proven in field.</p>
+
+          <ul class="site-footer__social" aria-label="Social media links">
+            <li>
+              <a href="https://www.facebook.com/kingpandadefense" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z"/></svg>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/armoredpandaindustries/" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2c2.7 0 3.1 0 4.1.06 1.1.05 1.8.2 2.4.44a4.9 4.9 0 0 1 1.8 1.16 4.9 4.9 0 0 1 1.16 1.8c.24.6.4 1.3.44 2.4.05 1 .06 1.4.06 4.1s0 3.1-.06 4.1c-.05 1.1-.2 1.8-.44 2.4a4.9 4.9 0 0 1-1.16 1.8 4.9 4.9 0 0 1-1.8 1.16c-.6.24-1.3.4-2.4.44-1 .05-1.4.06-4.1.06s-3.1 0-4.1-.06c-1.1-.05-1.8-.2-2.4-.44a4.9 4.9 0 0 1-1.8-1.16 4.9 4.9 0 0 1-1.16-1.8c-.24-.6-.4-1.3-.44-2.4C2 15.1 2 14.7 2 12s0-3.1.06-4.1c.05-1.1.2-1.8.44-2.4a4.9 4.9 0 0 1 1.16-1.8A4.9 4.9 0 0 1 5.46.54c.6-.24 1.3-.4 2.4-.44C8.9 2 9.3 2 12 2zm0 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 8.2a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4zm5.2-8.4a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0z"/></svg>
+              </a>
+            </li>
+            <li>
+              <a href="https://maps.app.goo.gl/MqtxAXpdQhbMv7Rq9" aria-label="Our location" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="site-footer__contact">
+          <h3 class="site-footer__heading">Contact</h3>
+          <ul>
+            <li>
+              <a href="tel:+639174630077">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.5 21 3 13.5 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>
+                0917 463 0077
+              </a>
+            </li>
+            <li>
+              <a href="mailto:hans@luxurycarsmanila.com.ph">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 5h20v14H2zm2 2v.4l8 5.6 8-5.6V7l-8 5.6z"/></svg>
+                contact@armoredpanda.com
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <p class="site-footer__legal">
+        &copy; <span id="current-year"></span> Armory Industries. All rights reserved.
+        Export controlled. Not for unauthorized distribution.
+      </p>
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+  </body>
+</html>
