@@ -27,7 +27,7 @@ export function initVehiclesModal() {
     function buildGallery(images) {
         if (!mainImg || !thumbsEl) return
         const base = import.meta.env.BASE_URL
-        mainImg.src = images[0] || ''
+        mainImg.src = base + (images[0] || '')
         mainImg.alt = ''
         thumbsEl.innerHTML = ''
 
