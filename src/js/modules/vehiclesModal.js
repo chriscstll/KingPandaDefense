@@ -39,12 +39,12 @@ export function initVehiclesModal() {
             const img = document.createElement('img')
             img.src = base + src 
             img.alt = `View ${i + 1}`
-            img.loading = 0 ? 'eager' : 'lazy'
+            img.loading = i === 0 ? 'eager' : 'lazy'
             thumb.appendChild(img)
             thumbsEl.appendChild(thumb) 
             thumbEls.push(thumb)
             thumb.addEventListener('click', () => {
-                mainImg.src = src
+                mainImg.src = base + src
                 thumbEls.forEach(t => t.classList.remove('is-active')) 
                 thumb.classList.add('is-active')
             })
