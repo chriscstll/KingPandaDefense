@@ -16,7 +16,6 @@ export function initVehiclesModal() {
     function buildUpgrades(upgrades) {
         const el = document.getElementById('modal-upgrades')
         if (!el) return
-
         el.innerHTML = ''
         upgrades.forEach(item => {
             const li = document.createElement('li')
@@ -27,6 +26,7 @@ export function initVehiclesModal() {
 
     function buildGallery(images) {
         if (!mainImg || !thumbsEl) return
+        const base = import.meta.env.BASE_URL
         mainImg.src = images[0] || ''
         mainImg.alt = ''
         thumbsEl.innerHTML = ''
@@ -37,7 +37,7 @@ export function initVehiclesModal() {
             thumb.className = 'vehicle-modal__thumb'
             
             const img = document.createElement('img')
-            img.src = src
+            img.src = base + src 
             img.alt = `View ${i + 1}`
             img.loading = 0 ? 'eager' : 'lazy'
             thumb.appendChild(img)
